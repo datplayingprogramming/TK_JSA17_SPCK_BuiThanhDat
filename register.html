@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Đăng ký — Utube Music</title>
+    <link rel="icon" href="assets/icons/music.svg">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="auth-page">
+    <header class="auth-header"><a class="brand" href="login.html"><img src="assets/icons/music.svg" alt=""><span>Utube
+                <b>Music</b></span></a><a class="auth-header-link" href="login.html">Đã có tài khoản? <b>Đăng
+                nhập</b></a></header>
+    <main class="auth-layout register-layout">
+        <section class="auth-poster">
+            <p class="overline">FIND YOUR FREQUENCY</p>
+            <h1>Âm nhạc<br>chờ <em>bạn khám phá.</em></h1>
+            <p>Tạo không gian riêng, lưu bài hát yêu thích và để AI DJ giúp bạn tìm âm thanh tiếp theo.</p>
+            <div class="poster-vinyl">
+                <div></div>
+            </div><span class="poster-label">SIDE A · YOUR NEW CHAPTER</span>
+        </section>
+        <section class="auth-form-side">
+            <form id="registerForm" class="auth-card" novalidate>
+                <p class="section-kicker">JOIN THE LISTENERS</p>
+                <h2>Tạo tài khoản.</h2>
+                <p class="auth-description">Chỉ mất một phút để bắt đầu.</p>
+                <label for="registerUsername">Tên người dùng</label><input id="registerUsername" type="text"
+                    placeholder="Tên hiển thị" autocomplete="username" required><label
+                    for="registerEmail">Email</label><input id="registerEmail" type="email"
+                    placeholder="you@example.com" autocomplete="email" required><label for="registerPassword">Mật
+                    khẩu</label><input id="registerPassword" type="password" placeholder="Ít nhất 6 ký tự"
+                    autocomplete="new-password" required><label for="registerConfirm">Xác nhận mật khẩu</label><input
+                    id="registerConfirm" type="password" placeholder="Nhập lại mật khẩu" autocomplete="new-password"
+                    required>
+                <p id="registerMessage" class="form-message" aria-live="polite"></p><button
+                    class="button button-light auth-submit" type="submit">Tạo tài khoản <span>→</span></button>
+                <p class="auth-switch">Đã có tài khoản? <a href="login.html">Đăng nhập</a></p>
+                <p class="auth-note">Bản demo lưu thông tin trong localStorage. Không dùng mật khẩu thật.</p>
+            </form>
+        </section>
+    </main>
+    <footer class="auth-footer"><span>© 2026 Utube Music</span><span>Find your frequency.</span></footer>
+    <script src="js/auth.js"></script>
+</body>
+
+</html>

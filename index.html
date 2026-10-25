@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Utube Music — khám phá âm nhạc theo tâm trạng của bạn."
+    />
+    <title>Utube Music — Âm nhạc của bạn</title>
+    <link rel="icon" href="assets/icons/music.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <button
+        class="icon-button mobile-menu"
+        id="menuToggle"
+        aria-label="Mở menu"
+      >
+        ☰
+      </button>
+      <a class="brand" href="index.html"
+        ><img src="assets/icons/music.svg" alt="" /><span
+          >Utube <b>Music</b></span
+        ></a
+      >
+      <label class="searchbar"
+        ><span>⌕</span
+        ><input
+          id="searchInput"
+          type="search"
+          placeholder="Tìm bài hát, nghệ sĩ, thể loại..."
+        /><kbd>⌕</kbd></label
+      >
+      <div class="top-actions">
+        <button id="aiOpenBtn" class="ai-top-button">
+          <span>✦</span> AI DJ
+        </button>
+        <div class="profile-wrap">
+          <button
+            id="profileButton"
+            class="profile-button"
+            aria-label="Tài khoản"
+          >
+            <span id="avatarInitial">U</span>
+          </button>
+          <div id="profileMenu" class="profile-menu hidden">
+            <p class="profile-name" id="profileName">Người dùng</p>
+            <p class="profile-email" id="profileEmail"></p>
+            <button id="logoutBtn" class="menu-logout">Đăng xuất</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <p class="sidebar-label">THƯ VIỆN</p>
+        <a class="side-link active" href="#home"><span>⌂</span> Trang chủ</a
+        ><a class="side-link" href="#discover"><span>◈</span> Khám phá</a
+        ><a class="side-link" href="#moods"><span>♫</span> Theo tâm trạng</a>
+        <div class="sidebar-rule"></div>
+        <p class="sidebar-label">BỘ SƯU TẬP</p>
+        <button class="side-link side-action" id="favoritesFilter">
+          <span>♡</span> Bài hát yêu thích <small id="favoriteCount">0</small>
+        </button>
+        <button class="side-link side-action" id="allSongsButton">
+          <span>▤</span> Tất cả bài hát
+        </button>
+        <div class="sidebar-bottom">
+          <div class="sidebar-note">
+            <span class="sparkle">✦</span><b>AI DJ</b>
+            <p>Để AI chọn nhạc theo tâm trạng của bạn.</p>
+            <button id="sidebarAiBtn">Thử ngay ↗</button>
+          </div>
+          <p class="sidebar-foot">© 2026 Utube Music</p>
+        </div>
+      </aside>
+      <main class="main-content" id="home">
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="overline">
+              <span class="live-dot"></span> YOUR PERSONAL SOUNDTRACK
+            </p>
+            <h1>Nghe điều bạn<br /><em>cảm thấy.</em></h1>
+            <p class="hero-description">
+              Một góc nhỏ dành cho âm nhạc, những khám phá mới và khoảnh khắc
+              chỉ thuộc về bạn.
+            </p>
+            <div class="hero-buttons">
+              <a class="button button-light" href="#discover">▶ Khám phá ngay</a
+              ><button class="button button-ghost" id="heroAiBtn">
+                ✦ Gợi ý bằng AI
+              </button>
+            </div>
+            <div class="welcome-box">
+              Xin chào, <b id="currentUser">bạn</b>.
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+            <div class="vinyl"><div class="vinyl-label">UT</div></div>
+            <div class="hero-sticker">
+              SIDE A<br /><b>YOUR<br />MOOD</b>
+            </div>
+            <div class="hero-caption">VOL. 01 — PLAY YOUR DAY</div>
+          </div>
+        </section>
+        <section class="section-block" id="discover">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">THE ROTATION</p>
+              <h2>Đang được khám phá <span>↗</span></h2>
+              <p class="section-subtitle">
+                Những âm thanh đáng để bạn dừng lại.
+              </p>
+            </div>
+            <div class="section-controls">
+              <button class="round-control" id="prevSongs">←</button
+              ><button class="round-control" id="nextSongs">→</button>
+            </div>
+          </div>
+          <div class="music-grid" id="songGrid">
+            <div class="loading-card">Đang tải thư viện âm nhạc...</div>
+          </div>
+          <p id="emptyState" class="empty-state hidden">
+            Không tìm thấy kết quả phù hợp.
+          </p>
+          <p id="dataNotice" class="data-notice"></p>
+        </section>
+        <section class="mood-section" id="moods">
+          <div class="mood-intro">
+            <p class="section-kicker">PICK A FEELING</p>
+            <h2>Hôm nay bạn<br /><em>đang cảm thấy gì?</em></h2>
+            <p>Chọn một tâm trạng. Để âm nhạc nói phần còn lại.</p>
+          </div>
+          <div class="mood-grid">
+            <button class="mood-card mood-calm" data-mood="chill">
+              <span>☁</span><b>Muốn bình yên</b
+              ><small>Chill · Ambient · Lo-fi</small>
+            </button>
+            <button class="mood-card mood-energy" data-mood="energy">
+              <span>✳</span><b>Cần năng lượng</b
+              ><small>Pop · Electronic · Upbeat</small>
+            </button>
+            <button class="mood-card mood-focus" data-mood="focus">
+              <span>◌</span><b>Cần tập trung</b
+              ><small>Instrumental · Focus</small>
+            </button>
+            <button class="mood-card mood-night" data-mood="night">
+              <span>☾</span><b>Đêm muộn</b><small>R&B · Indie · Dreamy</small>
+            </button>
+          </div>
+        </section>
+        <section class="ai-banner">
+          <div class="ai-symbol">✦</div>
+          <div>
+            <p class="section-kicker">A LITTLE HELP FROM AI</p>
+            <h2>Không biết nghe gì tiếp theo?</h2>
+            <p>AI DJ gợi ý playlist dựa trên tâm trạng bạn chọn.</p>
+          </div>
+          <button id="bannerAiBtn" class="button button-light">
+            Trò chuyện với AI ↗
+          </button>
+        </section>
+        <footer class="site-footer">
+          <a class="footer-brand" href="#home">Utube Music</a
+          ><span>Âm nhạc không cần lý do.</span
+          ><span>Giao diện học tập · Dữ liệu demo</span>
+        </footer>
+      </main>
+    </div>
+    <div class="toast" id="toast" role="status"></div>
+    <div
+      class="modal-backdrop hidden"
+      id="aiModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="aiTitle"
+    >
+      <section class="ai-modal">
+        <div class="modal-header">
+          <div class="modal-title-icon">✦</div>
+          <div>
+            <p class="section-kicker">UTUBE MUSIC INTELLIGENCE</p>
+            <h2 id="aiTitle">AI DJ <span>beta</span></h2>
+          </div>
+          <button
+            id="aiCloseBtn"
+            class="icon-button close-button"
+            aria-label="Đóng"
+          >
+            ×
+          </button>
+        </div>
+        <p class="ai-intro">
+          Hãy nói bạn đang cảm thấy thế nào. AI DJ sẽ chọn gợi ý từ thư viện
+          demo.
+        </p>
+        <div class="quick-prompts">
+          <button data-prompt="Tôi muốn thư giãn">Thư giãn</button
+          ><button data-prompt="Tôi cần năng lượng">Cần năng lượng</button
+          ><button data-prompt="Tôi muốn tập trung học">Tập trung học</button
+          ><button data-prompt="Nhạc nghe ban đêm">Đêm muộn</button>
+        </div>
+        <form id="aiForm" class="ai-form">
+          <input
+            id="aiInput"
+            placeholder="Ví dụ: Tôi đang hơi buồn..."
+            required
+          /><button type="submit" aria-label="Gửi">↑</button>
+        </form>
+        <div id="aiResponse" class="ai-response">
+          <span class="ai-response-mark">✦</span>
+          <p>Chọn một gợi ý hoặc nhập tâm trạng của bạn để bắt đầu.</p>
+        </div>
+        <p class="ai-disclaimer">
+          AI demo dùng quy tắc gợi ý theo từ khóa, không gửi dữ liệu ra ngoài.
+        </p>
+      </section>
+    </div>
+    <script src="js/auth.js"></script>
+    <script src="js/home.js"></script>
+  </body>
+</html>

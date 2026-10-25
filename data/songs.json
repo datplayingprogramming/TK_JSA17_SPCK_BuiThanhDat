@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "title": "Midnight Drive",
+    "artist": "The Velvet Hours",
+    "genre": "Indie",
+    "mood": "night dreamy",
+    "cover": "purple",
+    "symbol": "☾"
+  },
+  {
+    "id": 2,
+    "title": "Afterglow",
+    "artist": "Luna Vale",
+    "genre": "Pop",
+    "mood": "energy upbeat",
+    "cover": "pink",
+    "symbol": "✳"
+  },
+  {
+    "id": 3,
+    "title": "Neon City",
+    "artist": "Static Bloom",
+    "genre": "Electronic",
+    "mood": "energy upbeat",
+    "cover": "blue",
+    "symbol": "⌁"
+  },
+  {
+    "id": 4,
+    "title": "Soft Focus",
+    "artist": "Morrow",
+    "genre": "Instrumental",
+    "mood": "focus calm",
+    "cover": "green",
+    "symbol": "◌"
+  },
+  {
+    "id": 5,
+    "title": "Golden Hour",
+    "artist": "Mira Sol",
+    "genre": "R&B",
+    "mood": "night dreamy",
+    "cover": "gold",
+    "symbol": "☼"
+  },
+  {
+    "id": 6,
+    "title": "Rain on Glass",
+    "artist": "Slow Cinema",
+    "genre": "Ambient",
+    "mood": "chill calm focus",
+    "cover": "silver",
+    "symbol": "☁"
+  },
+  {
+    "id": 7,
+    "title": "Paper Planes",
+    "artist": "Northbound",
+    "genre": "Indie",
+    "mood": "energy upbeat",
+    "cover": "orange",
+    "symbol": "↗"
+  },
+  {
+    "id": 8,
+    "title": "Blue Room",
+    "artist": "Echo Park",
+    "genre": "Lo-fi",
+    "mood": "chill focus",
+    "cover": "teal",
+    "symbol": "♫"
+  },
+  {
+    "id": 9,
+    "title": "Last Train Home",
+    "artist": "Noir Avenue",
+    "genre": "R&B",
+    "mood": "night dreamy",
+    "cover": "red",
+    "symbol": "↘"
+  },
+  {
+    "id": 10,
+    "title": "Still Here",
+    "artist": "June & July",
+    "genre": "Ambient",
+    "mood": "calm chill",
+    "cover": "lavender",
+    "symbol": "∞"
+  },
+  {
+    "id": 11,
+    "title": "Bright Side",
+    "artist": "The Weekend Kids",
+    "genre": "Pop",
+    "mood": "energy upbeat",
+    "cover": "coral",
+    "symbol": "✦"
+  },
+  {
+    "id": 12,
+    "title": "Quiet Hours",
+    "artist": "Low Tide",
+    "genre": "Instrumental",
+    "mood": "focus calm",
+    "cover": "navy",
+    "symbol": "◌"
+  }
+]

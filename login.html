@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Đăng nhập — Utube Music</title>
+    <link rel="icon" href="assets/icons/music.svg" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="auth-page">
+    <header class="auth-header">
+      <a class="brand" href="login.html"
+        ><img src="assets/icons/music.svg" alt="" /><span
+          >Utube <b>Music</b></span
+        ></a
+      ><a class="auth-header-link" href="register.html"
+        >Chưa có tài khoản? <b>Đăng ký</b></a
+      >
+    </header>
+    <main class="auth-layout">
+      <section class="auth-poster">
+        <p class="overline">YOUR PERSONAL SOUNDTRACK</p>
+        <h1>Mỗi ngày<br />một <em>giai điệu.</em></h1>
+        <p>
+          Không chỉ là nghe nhạc. Là tìm thấy đúng âm thanh cho khoảnh khắc của
+          bạn.
+        </p>
+        <div class="poster-vinyl"><div></div></div>
+        <span class="poster-label">UTUBE MUSIC · EST. 2026</span>
+      </section>
+      <section class="auth-form-side">
+        <form id="loginForm" class="auth-card" novalidate>
+          <p class="section-kicker">WELCOME BACK</p>
+          <h2>Chào mừng trở lại.</h2>
+          <p class="auth-description">
+            Đăng nhập để tiếp tục hành trình âm nhạc.
+          </p>
+          <label for="loginEmail">Email</label
+          ><input
+            id="loginEmail"
+            type="email"
+            placeholder="you@example.com"
+            autocomplete="email"
+            required
+          /><label for="loginPassword">Mật khẩu</label
+          ><input
+            id="loginPassword"
+            type="password"
+            placeholder="Nhập mật khẩu"
+            autocomplete="current-password"
+            required
+          />
+          <p id="loginMessage" class="form-message" aria-live="polite"></p>
+          <button class="button button-light auth-submit" type="submit">
+            Đăng nhập <span>→</span>
+          </button>
+          <p class="auth-switch">
+            Chưa có tài khoản? <a href="register.html">Tạo tài khoản</a>
+          </p>
+          <p class="auth-note">
+            Bản trình diễn học tập · Tài khoản lưu trên trình duyệt này.
+          </p>
+        </form>
+      </section>
+    </main>
+    <footer class="auth-footer">
+      <span>© 2026 Utube Music</span><span>Find your frequency.</span>
+    </footer>
+    <script src="js/auth.js"></script>
+  </body>
+</html>
